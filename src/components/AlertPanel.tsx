@@ -94,6 +94,24 @@ const AlertPanel = () => {
     setAlerts(prev => prev.filter(a => a.id !== alertId));
   };
 
+  // Simulate mission context and baseline
+  const getAlertContext = (alert: Alert) => {
+    if (alert.astronaut === "Dr. Wilson" && alert.type === "warning") {
+      return "Dr. Wilson's stress is 12% higher than his personal baseline during a critical-phase maneuver.";
+    }
+    return null;
+  };
+  // Simulate root cause suggestions
+  const getRootCauseSuggestions = (alert: Alert) => {
+    if (alert.astronaut === "Dr. Rodriguez") {
+      return ["Medics check rest period log", "Review biometric scan"];
+    }
+    if (alert.type === "warning") {
+      return ["Schedule group activity", "Assign meditation session"];
+    }
+    return ["Monitor status"];
+  };
+
   return (
     <Card className="p-6 bg-gradient-space border-border" aria-label="Alert Panel">
       <div className="mb-4">
@@ -127,6 +145,19 @@ const AlertPanel = () => {
                 <p className="text-xs text-muted-foreground/60 mt-1">
                   {alert.timestamp.toLocaleTimeString()}
                 </p>
+                {/* Mission context */}
+                {getAlertContext(alert) && (
+                  <p className="text-xs text-warning mt-1">{getAlertContext(alert)}</p>
+                )}
+                {/* Root Cause Suggestion Matrix */}
+                <div className="mt-2">
+                  <span className="text-xs font-semibold text-accent">Root Cause Suggestions:</span>
+                  <ul className="text-xs text-muted-foreground ml-2">
+                    {getRootCauseSuggestions(alert).map((s, i) => (
+                      <li key={i}>• {s}</li>
+                    ))}
+                  </ul>
+                </div>
                 <div className="flex gap-2 mt-2">
                   <button
                     className="px-2 py-1 rounded bg-success/10 text-success font-semibold focus:outline focus:ring-2 focus:ring-success"

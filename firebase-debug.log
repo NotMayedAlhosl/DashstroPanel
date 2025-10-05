@@ -1,0 +1,202 @@
+[debug] [2025-10-05T10:31:14.274Z] ----------------------------------------------------------------------
+[debug] [2025-10-05T10:31:14.277Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-10-05T10:31:14.278Z] CLI Version:   14.12.0
+[debug] [2025-10-05T10:31:14.278Z] Platform:      win32
+[debug] [2025-10-05T10:31:14.278Z] Node Version:  v22.18.0
+[debug] [2025-10-05T10:31:14.278Z] Time:          Sun Oct 05 2025 14:31:14 GMT+0400 (Gulf Standard Time)
+[debug] [2025-10-05T10:31:14.279Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-05T10:31:14.281Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-10-05T10:31:14.360Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-05T10:31:14.360Z] > authorizing via signed-in user (whispervault16@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\amksu\Downloads\quantum-astro-mood-MAIN\quantum-astro-mood-main - V5
+
+[debug] [2025-10-05T10:31:15.283Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-10-05T10:31:15.283Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-10-05T10:32:11.246Z] Checked if tokens are valid: false, expires at: 1755187030124
+[debug] [2025-10-05T10:32:11.247Z] Checked if tokens are valid: false, expires at: 1755187030124
+[debug] [2025-10-05T10:32:11.247Z] > refreshing access token with scopes: []
+[debug] [2025-10-05T10:32:11.250Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-05T10:32:11.250Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-05T10:32:11.950Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-05T10:32:11.951Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-05T10:32:11.964Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-05T10:32:11.964Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"Quantum-Mood-Tracker"}
+[debug] [2025-10-05T10:32:12.908Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-05T10:32:12.909Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"quantum-mood-tracker"}
+[debug] [2025-10-05T10:32:18.322Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:32:18.322Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:32:18.323Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-05T10:32:18.324Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"quantum-Mood-Tracker"}
+[debug] [2025-10-05T10:32:19.102Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-05T10:32:19.102Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"quantum-mood-tracker"}
+[debug] [2025-10-05T10:33:04.790Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:33:04.790Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:33:04.791Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-05T10:33:04.791Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"quantum-M00d-Tracker"}
+[debug] [2025-10-05T10:33:05.989Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-05T10:33:05.989Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"quantum-m00d-tracker"}
+[debug] [2025-10-05T10:33:12.159Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:33:12.160Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:33:12.160Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-05T10:33:12.161Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"quan1um-M00d-Tracker"}
+[debug] [2025-10-05T10:33:12.948Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-05T10:33:12.948Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"quan1um-m00d-tracker"}
+[debug] [2025-10-05T10:33:28.825Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:518:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1132:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:271:20)
+    at ReadStream.emit (node:events:530:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-05T10:35:13.621Z] ----------------------------------------------------------------------
+[debug] [2025-10-05T10:35:13.628Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-10-05T10:35:13.629Z] CLI Version:   14.12.0
+[debug] [2025-10-05T10:35:13.629Z] Platform:      win32
+[debug] [2025-10-05T10:35:13.629Z] Node Version:  v22.18.0
+[debug] [2025-10-05T10:35:13.630Z] Time:          Sun Oct 05 2025 14:35:13 GMT+0400 (Gulf Standard Time)
+[debug] [2025-10-05T10:35:13.630Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-05T10:35:13.642Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-05T10:35:13.643Z] > authorizing via signed-in user (whispervault16@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\amksu\Downloads\quantum-astro-mood-MAIN\quantum-astro-mood-main - V5
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-10-05T10:35:39.470Z] ----------------------------------------------------------------------
+[debug] [2025-10-05T10:35:39.472Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-10-05T10:35:39.472Z] CLI Version:   14.12.0
+[debug] [2025-10-05T10:35:39.472Z] Platform:      win32
+[debug] [2025-10-05T10:35:39.473Z] Node Version:  v22.18.0
+[debug] [2025-10-05T10:35:39.473Z] Time:          Sun Oct 05 2025 14:35:39 GMT+0400 (Gulf Standard Time)
+[debug] [2025-10-05T10:35:39.473Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-05T10:35:39.477Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-05T10:35:39.478Z] > authorizing via signed-in user (whispervault16@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\amksu\Downloads\quantum-astro-mood-MAIN\quantum-astro-mood-main - V5
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-10-05T10:36:12.328Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:36:12.328Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:36:12.331Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-05T10:36:12.331Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"Nasa-QMT"}
+[debug] [2025-10-05T10:36:13.444Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-05T10:36:13.445Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"nasa-qmt"}
+[debug] [2025-10-05T10:36:17.505Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:36:17.506Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:36:17.506Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1/projects:checkProjectId [none]
+[debug] [2025-10-05T10:36:17.506Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"proposedId":"Nasa-QMT0"}
+[debug] [2025-10-05T10:36:17.963Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1/projects:checkProjectId 200
+[debug] [2025-10-05T10:36:17.963Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1/projects:checkProjectId {"projectIdStatus":"PROJECT_ID_NOT_VALID","suggestedProjectId":"nasa-qmt0"}
+[debug] [2025-10-05T10:36:35.072Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:518:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1132:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:271:20)
+    at ReadStream.emit (node:events:530:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-10-05T10:36:42.645Z] ----------------------------------------------------------------------
+[debug] [2025-10-05T10:36:42.653Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-10-05T10:36:42.654Z] CLI Version:   14.12.0
+[debug] [2025-10-05T10:36:42.655Z] Platform:      win32
+[debug] [2025-10-05T10:36:42.655Z] Node Version:  v22.18.0
+[debug] [2025-10-05T10:36:42.656Z] Time:          Sun Oct 05 2025 14:36:42 GMT+0400 (Gulf Standard Time)
+[debug] [2025-10-05T10:36:42.656Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-05T10:36:42.672Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-05T10:36:42.673Z] > authorizing via signed-in user (whispervault16@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\amksu\Downloads\quantum-astro-mood-MAIN\quantum-astro-mood-main - V5
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-10-05T10:36:48.378Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:36:48.378Z] Checked if tokens are valid: true, expires at: 1759663930951
+[debug] [2025-10-05T10:36:48.380Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-10-05T10:36:49.405Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-10-05T10:36:49.405Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-10-05T10:36:54.245Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\amksu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:518:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1132:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:271:20)
+    at ReadStream.emit (node:events:530:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.

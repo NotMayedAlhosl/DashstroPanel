@@ -5,6 +5,7 @@ import MoodTrendChart from "@/components/MoodTrendChart";
 import AlertPanel from "@/components/AlertPanel";
 import RecommendationPanel from "@/components/RecommendationPanel";
 import QuantumVisualization from "@/components/QuantumVisualization";
+import AnalyticsDashboard from "@/components/AnalyticsDashboard"; // new component
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
 
@@ -80,6 +81,8 @@ const Index = () => {
           </div>
         </div>
         <RecommendationPanel />
+        {/* Analytics Dashboard */}
+        <AnalyticsDashboard />
         {/* Onboarding tour modal (stub) */}
         {showTour && (
           <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" aria-modal="true" aria-label="Onboarding Tour">

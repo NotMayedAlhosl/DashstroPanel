@@ -20,34 +20,6 @@ const Header = () => {
           
           {/* Enhanced Menu */}
           <nav className="flex items-center gap-4">
-            <a
-              href="/"
-              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-primary/10 transition-colors text-foreground font-medium"
-            >
-              <LayoutDashboard className="w-5 h-5 text-primary" />
-              <span className="hidden sm:inline">Dashboard</span>
-            </a>
-            <a
-              href="#crew"
-              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-success/10 transition-colors text-foreground font-medium"
-            >
-              <User className="w-5 h-5 text-success" />
-              <span className="hidden sm:inline">Crew</span>
-            </a>
-            <a
-              href="#analytics"
-              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-secondary/10 transition-colors text-foreground font-medium"
-            >
-              <BarChart2 className="w-5 h-5 text-secondary" />
-              <span className="hidden sm:inline">Analytics</span>
-            </a>
-            <a
-              href="#settings"
-              className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-muted/10 transition-colors text-foreground font-medium"
-            >
-              <Settings className="w-5 h-5 text-muted-foreground" />
-              <span className="hidden sm:inline">Settings</span>
-            </a>
           </nav>
 
           <div className="flex items-center gap-6 ml-6">

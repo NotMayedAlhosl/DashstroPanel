@@ -72,6 +72,13 @@ const RecommendationPanel = () => {
     }
   };
 
+  // Simulate root cause suggestions
+  const getRootCauseSuggestions = (rec: Recommendation) => {
+    if (rec.priority === "high") return ["Immediate rest", "Medics review logs"];
+    if (rec.priority === "medium") return ["Schedule group activity"];
+    return ["Monitor status"];
+  };
+
   return (
     <Card className="p-6 bg-gradient-space border-border">
       <div className="flex items-center gap-3 mb-6">
@@ -112,6 +119,16 @@ const RecommendationPanel = () => {
                   </Badge>
                 </div>
               </div>
+            </div>
+
+            {/* Root Cause Suggestion Matrix */}
+            <div className="mt-2">
+              <span className="text-xs font-semibold text-accent">Root Cause Suggestions:</span>
+              <ul className="text-xs text-muted-foreground ml-2">
+                {getRootCauseSuggestions(rec).map((s, i) => (
+                  <li key={i}>• {s}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
