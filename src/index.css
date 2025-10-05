@@ -67,6 +67,20 @@ All colors MUST be HSL.
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* High-contrast mode */
+    --hc-background: 0 0% 0%;
+    --hc-foreground: 0 0% 100%;
+    --hc-primary: 220 100% 60%;
+    --hc-success: 120 100% 40%;
+    --hc-warning: 40 100% 60%;
+    --hc-destructive: 0 100% 50%;
+
+    /* Color-blind palette */
+    --cb-primary: 200 100% 45%;
+    --cb-success: 60 100% 45%;
+    --cb-warning: 30 100% 55%;
+    --cb-destructive: 0 80% 55%;
   }
 }
 
@@ -79,3 +93,40 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+/* Enlarge small labels */
+.text-xs, .text-sm {
+  font-size: 1rem !important;
+  letter-spacing: 0.01em;
+}
+
+/* High-contrast/Color-blind mode toggles (to be toggled via JS/class) */
+body.high-contrast {
+  background: hsl(var(--hc-background));
+  color: hsl(var(--hc-foreground));
+}
+body.high-contrast .bg-background { background: hsl(var(--hc-background)); }
+body.high-contrast .text-foreground { color: hsl(var(--hc-foreground)); }
+body.high-contrast .bg-primary { background: hsl(var(--hc-primary)); }
+body.high-contrast .text-primary { color: hsl(var(--hc-primary)); }
+body.high-contrast .bg-success { background: hsl(var(--hc-success)); }
+body.high-contrast .text-success { color: hsl(var(--hc-success)); }
+body.high-contrast .bg-warning { background: hsl(var(--hc-warning)); }
+body.high-contrast .text-warning { color: hsl(var(--hc-warning)); }
+body.high-contrast .bg-destructive { background: hsl(var(--hc-destructive)); }
+body.high-contrast .text-destructive { color: hsl(var(--hc-destructive)); }
+
+body.color-blind .bg-primary { background: hsl(var(--cb-primary)); }
+body.color-blind .text-primary { color: hsl(var(--cb-primary)); }
+body.color-blind .bg-success { background: hsl(var(--cb-success)); }
+body.color-blind .text-success { color: hsl(var(--cb-success)); }
+body.color-blind .bg-warning { background: hsl(var(--cb-warning)); }
+body.color-blind .text-warning { color: hsl(var(--cb-warning)); }
+body.color-blind .bg-destructive { background: hsl(var(--cb-destructive)); }
+body.color-blind .text-destructive { color: hsl(var(--cb-destructive)); }

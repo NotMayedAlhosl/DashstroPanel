@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Activity, Brain, Heart } from "lucide-react";
+import { Activity, Brain, Heart, MessageCircle, Flag, ClipboardList } from "lucide-react";
 
 interface BiometricData {
   heartRate: number;
@@ -25,6 +25,7 @@ const AstronautCard = ({ name, role, avatar }: AstronautCardProps) => {
     moodScore: 75,
     uncertainty: 12,
   });
+  const [showTimeline, setShowTimeline] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -117,6 +118,47 @@ const AstronautCard = ({ name, role, avatar }: AstronautCardProps) => {
           </div>
         </div>
       </div>
+
+      <div className="flex gap-2 mt-4">
+        <button
+          className="px-2 py-1 rounded bg-primary/10 text-primary font-semibold focus:outline focus:ring-2 focus:ring-primary"
+          aria-label={`Message ${name}`}
+        >
+          <MessageCircle className="w-4 h-4 inline" /> Message
+        </button>
+        <button
+          className="px-2 py-1 rounded bg-success/10 text-success font-semibold focus:outline focus:ring-2 focus:ring-success"
+          aria-label={`Assign task to ${name}`}
+        >
+          <ClipboardList className="w-4 h-4 inline" /> Assign
+        </button>
+        <button
+          className="px-2 py-1 rounded bg-warning/10 text-warning font-semibold focus:outline focus:ring-2 focus:ring-warning"
+          aria-label={`Flag ${name}`}
+        >
+          <Flag className="w-4 h-4 inline" /> Flag
+        </button>
+        <button
+          className="ml-auto px-2 py-1 rounded bg-secondary/10 text-secondary font-semibold focus:outline focus:ring-2 focus:ring-secondary"
+          aria-label={`Show timeline for ${name}`}
+          onClick={() => setShowTimeline(v => !v)}
+        >
+          Timeline
+        </button>
+      </div>
+      {showTimeline && (
+        <div className="mt-4 bg-card/90 rounded p-2 border border-border">
+          <h4 className="text-base font-bold mb-2 text-foreground">24h Timeline</h4>
+          <ul className="text-sm text-muted-foreground">
+            <li>08:00 - Mood assessment: Stable</li>
+            <li>10:30 - Intervention: Meditation</li>
+            <li>13:00 - Alert: Fatigue detected</li>
+            <li>15:00 - Message: Family call</li>
+            <li>18:00 - Task assigned: System check</li>
+            {/* ...could be dynamic... */}
+          </ul>
+        </div>
+      )}
     </Card>
   );
 };

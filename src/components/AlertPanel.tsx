@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertTriangle, CheckCircle, Info } from "lucide-react";
@@ -9,10 +9,15 @@ interface Alert {
   astronaut: string;
   message: string;
   timestamp: Date;
+  owner?: string;
+  severity?: "low" | "medium" | "high";
+  history?: Array<{ action: string; time: Date }>;
 }
 
 const AlertPanel = () => {
   const [alerts, setAlerts] = useState<Alert[]>([]);
+  const [alertHistory, setAlertHistory] = useState<Alert[]>([]);
+  const actionRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const astronauts = ["Commander Chen", "Dr. Rodriguez", "Engineer Patel", "Lt. Kim", "Specialist Brown", "Dr. Wilson"];
@@ -81,18 +86,27 @@ const AlertPanel = () => {
     }
   };
 
-  return (
-    <Card className="p-6 bg-gradient-space border-border">
-      <div className="mb-4">
-        <h3 className="text-lg font-semibold text-foreground">Real-time Alerts</h3>
-        <p className="text-sm text-muted-foreground">AI-powered monitoring system</p>
-      </div>
+  const handleAction = (alertId: string, action: string) => {
+    setAlertHistory(prev => [
+      ...prev,
+      { ...alerts.find(a => a.id === alertId)!, history: [{ action, time: new Date() }] },
+    ]);
+    setAlerts(prev => prev.filter(a => a.id !== alertId));
+  };
 
-      <div className="space-y-3 max-h-[400px] overflow-y-auto">
+  return (
+    <Card className="p-6 bg-gradient-space border-border" aria-label="Alert Panel">
+      <div className="mb-4">
+        <h3 className="text-lg font-semibold text-foreground" tabIndex={0}>Real-time Alerts</h3>
+        <p className="text-base text-muted-foreground">AI-powered monitoring system</p>
+      </div>
+      <div className="space-y-3 max-h-[400px] overflow-y-auto" aria-live="polite">
         {alerts.map(alert => (
           <div 
             key={alert.id}
-            className={`p-4 rounded-lg border ${getAlertColor(alert.type)} transition-all duration-300 hover:scale-[1.02]`}
+            className={`p-4 rounded-lg border ${getAlertColor(alert.type)} transition-all duration-300 hover:scale-[1.02] focus:outline focus:ring-2 focus:ring-warning`}
+            tabIndex={0}
+            aria-label={`Alert: ${alert.message} for ${alert.astronaut}`}
           >
             <div className="flex items-start gap-3">
               <div className={`mt-0.5 ${
@@ -102,22 +116,49 @@ const AlertPanel = () => {
               }`}>
                 {getAlertIcon(alert.type)}
               </div>
-              
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="font-medium text-foreground">{alert.astronaut}</span>
-                  <Badge variant="outline" className="text-xs">
-                    {alert.type}
-                  </Badge>
+                  <Badge variant="outline" className="text-xs">{alert.type}</Badge>
+                  <Badge variant="outline" className="text-xs capitalize">{alert.severity || "medium"}</Badge>
+                  <span className="text-xs text-muted-foreground ml-2">Owner: {alert.owner || "Unassigned"}</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{alert.message}</p>
+                <p className="text-base text-muted-foreground">{alert.message}</p>
                 <p className="text-xs text-muted-foreground/60 mt-1">
                   {alert.timestamp.toLocaleTimeString()}
                 </p>
+                <div className="flex gap-2 mt-2">
+                  <button
+                    className="px-2 py-1 rounded bg-success/10 text-success font-semibold focus:outline focus:ring-2 focus:ring-success"
+                    aria-label="Acknowledge alert"
+                    onClick={() => handleAction(alert.id, "acknowledged")}
+                  >Acknowledge</button>
+                  <button
+                    className="px-2 py-1 rounded bg-primary/10 text-primary font-semibold focus:outline focus:ring-2 focus:ring-primary"
+                    aria-label="Assign alert"
+                    onClick={() => handleAction(alert.id, "assigned")}
+                  >Assign</button>
+                  <button
+                    className="px-2 py-1 rounded bg-warning/10 text-warning font-semibold focus:outline focus:ring-2 focus:ring-warning"
+                    aria-label="Snooze alert"
+                    onClick={() => handleAction(alert.id, "snoozed")}
+                  >Snooze</button>
+                </div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      {/* Alert history */}
+      <div className="mt-6">
+        <h4 className="text-base font-bold text-foreground mb-2">Alert History</h4>
+        <div className="max-h-[120px] overflow-y-auto">
+          {alertHistory.map((alert, idx) => (
+            <div key={idx} className="text-xs text-muted-foreground mb-1">
+              [{alert.history?.[0].time.toLocaleTimeString()}] {alert.astronaut}: {alert.message} ({alert.history?.[0].action})
+            </div>
+          ))}
+        </div>
       </div>
     </Card>
   );
