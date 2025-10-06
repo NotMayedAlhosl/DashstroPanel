@@ -97,13 +97,25 @@ Quantum Mood Tracker is powered by cutting-edge web technologies for real-time a
 
 ## 🌍 How to Deploy
 
-1. Open your project in [Lovable](https://lovable.dev)  
-2. Click **Share → Publish** to deploy instantly  
+Follow these steps to set up and run **Quantum Mood Tracker** locally:
 
-Alternatively, deploy manually using your preferred platform:
-- **Vercel** – for instant React app hosting  
-- **Netlify** – for serverless deployment  
-- **GitHub Pages** – for static builds  
+### **1. Install VS Code**
+If you haven’t already, download and install **Visual Studio Code** from the official website:  
+👉 [Download VS Code](https://code.visualstudio.com/)
+
+---
+
+### **2. Install Node.js and npm**
+The project requires **Node.js (v18 or later)** and **npm**, which comes bundled with Node.
+
+- Download Node.js from the official site:  
+  👉 [https://nodejs.org/](https://nodejs.org/)
+
+- Verify the installation:
+  ```bash
+  node -v
+  npm -v
+
 
 ---
 
