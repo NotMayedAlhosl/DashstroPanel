@@ -1,73 +1,153 @@
-# Welcome to your Lovable project
+# Welcome to Quantum Mood Tracker 🧠🚀  
+**ISS Mission Control | Real-Time Crew Emotional Analytics**
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/acba83a0-9cee-4a50-b348-75a547b391fa
+**Project Name**: Quantum Mood Tracker  
+**Description**:  
+A futuristic mission control dashboard designed to analyze, visualize, and optimize crew emotional stability during deep-space expeditions.  
+This web app uses **real-time quantum mood tracking**, **AI wellness recommendations**, and **neural visualization** to ensure optimal mission readiness and psychological balance for every crew member.
+
+**Preview Image**:  
+![Quantum Mood Tracker Dashboard](./assets/quantum-mood-tracker-preview.png)
+
+**Live Demo**: [Your Website URL Here]  
+**Repository**: [Your GitHub Repo URL Here]
+
+---
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
+You can modify the Quantum Mood Tracker using any of the following methods:
 
-**Use Lovable**
+### **1. Use Lovable**
+If this project was generated via [Lovable](https://lovable.dev), visit your **Lovable Project Dashboard** to edit directly using natural language prompts.  
+All changes made via Lovable are automatically committed to this repository.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/acba83a0-9cee-4a50-b348-75a547b391fa) and start prompting.
+👉 [Open in Lovable](https://lovable.dev/projects/YOUR_PROJECT_ID_HERE)
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+### **2. Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+To work locally on your system:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd quantum-mood-tracker
 
-# Step 3: Install the necessary dependencies.
+# Step 3: Install dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Your local development server will launch automatically and support hot-reloading for instant UI updates.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+### **3. Edit directly in GitHub**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Go to the file you want to modify  
+- Click the **pencil icon (✏️)** in the top-right corner  
+- Make your edits and commit changes directly from GitHub’s web interface  
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+### **4. Use GitHub Codespaces**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+To edit in a cloud-based environment:
 
-## How can I deploy this project?
+1. Navigate to your repo’s main page  
+2. Click **Code → Codespaces → New Codespace**  
+3. Edit, preview, and commit directly from your browser  
 
-Simply open [Lovable](https://lovable.dev/projects/acba83a0-9cee-4a50-b348-75a547b391fa) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 🔧 Technologies Used
 
-Yes, you can!
+Quantum Mood Tracker is powered by cutting-edge web technologies for real-time analytics and modern design:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- ⚡ **Vite** – Ultra-fast bundler and dev server  
+- ⚛️ **React + TypeScript** – Component-based UI architecture  
+- 🎨 **Tailwind CSS** – Responsive, utility-first styling  
+- 🧩 **shadcn/ui** – Beautifully structured UI components  
+- 📈 **Recharts** – Interactive data visualization  
+- 🧠 **Framer Motion** – Smooth UI animations  
+- 🌐 **Node.js + npm** – Development environment and dependency management  
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 🧮 Core Features
+
+- **Mission Readiness KPI** – Monitors emotional cohesion and stress levels  
+- **Quantum State Visualization** – Real-time field mapping of wave functions & uncertainties  
+- **Crew Status Overview** – Displays heart rate, stress level, and future mood risk index per crew member  
+- **AI Recommendations** – Automatically suggests meditation, sleep, or social interaction adjustments  
+- **Mood Trend Analysis** – 24-hour probability tracking with uncertainty visualization  
+- **Real-time Alerts** – AI-monitored emotional shifts with intervention options  
+- **Export Options** – Generate mission reports in PDF, CSV, or JSON format  
+- **Analytics Dashboard** – Tracks long-term team cohesion and mission impact  
+
+---
+
+## 🌍 How to Deploy
+
+1. Open your project in [Lovable](https://lovable.dev)  
+2. Click **Share → Publish** to deploy instantly  
+
+Alternatively, deploy manually using your preferred platform:
+- **Vercel** – for instant React app hosting  
+- **Netlify** – for serverless deployment  
+- **GitHub Pages** – for static builds  
+
+---
+
+## 🌐 Custom Domain
+
+You can connect a custom domain in Lovable or via your hosting provider.  
+To set this up on Lovable:
+
+> Go to **Project → Settings → Domains → Connect Domain**  
+
+📘 Read more: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+---
+
+## 📊 Example Crew Metrics (Sample Data from Dashboard)
+
+| Crew Member       | Role                  | Status   | Heart Rate | Stress | Mood Risk | Quantum State |
+|-------------------|----------------------|----------|-------------|---------|------------|----------------|
+| Commander Chen    | Mission Commander    | Positive | 73 bpm      | 36%     | Low        | 41.3%          |
+| Dr. Rodriguez     | Chief Medical Officer| Positive | 71 bpm      | 34%     | Low        | 41.1%          |
+| Engineer Patel    | Systems Engineer     | Positive | 72 bpm      | 33%     | Moderate   | 41.2%          |
+| Lt. Kim           | Flight Engineer      | Positive | 71 bpm      | 31%     | Low        | 41.3%          |
+| Specialist Brown  | Research Specialist  | Positive | 73 bpm      | 32%     | Low        | 41.3%          |
+| Dr. Wilson        | Research Scientist   | Positive | 72 bpm      | 34%     | Moderate   | 41.2%          |
+
+---
+
+## 💡 AI Recommendations (Generated by the System)
+
+- **Meditation Session (High Priority)**  
+  30-minute mindfulness to reduce cortisol levels  
+- **Social Interaction Time (Medium Priority)**  
+  Group activities to boost morale  
+- **Sleep Optimization (High Priority)**  
+  Cabin lighting adjustment for improved rest  
+
+---
+
+## 🧭 Analytics Summary
+
+- **Team Cohesion Score:** 82%  
+- **Mission Phase Stress Impact:**  
+  - Prep: 40%  
+  - Critical: 68%  
+  - Recovery: 55%  
+
+---
