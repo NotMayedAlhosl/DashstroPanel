@@ -9,7 +9,7 @@ A futuristic mission control dashboard designed to analyze, visualize, and optim
 This web app uses **real-time quantum mood tracking**, **AI wellness recommendations**, and **neural visualization** to ensure optimal mission readiness and psychological balance for every crew member.
 
 **Preview Image**:  
-![Quantum Mood Tracker Dashboard](./assets/quantum-mood-tracker-preview.png)
+![Quantum Mood Tracker Dashboard](./Preview/Quantum Mood Tracker ISS Mission Control.png)
 
 **Live Demo**: [Your Website URL Here]  
 **Repository**: [Your GitHub Repo URL Here]
