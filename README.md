@@ -16,18 +16,6 @@ This web app uses **real-time quantum mood tracking**, **AI wellness recommendat
 
 ---
 
-## How can I edit this code?
-
-You can modify the Quantum Mood Tracker using any of the following methods:
-
-### **1. Use Lovable**
-If this project was generated via [Lovable](https://lovable.dev), visit your **Lovable Project Dashboard** to edit directly using natural language prompts.  
-All changes made via Lovable are automatically committed to this repository.
-
-👉 [Open in Lovable](https://lovable.dev/projects/YOUR_PROJECT_ID_HERE)
-
----
-
 ### **2. Use your preferred IDE**
 
 To work locally on your system:
